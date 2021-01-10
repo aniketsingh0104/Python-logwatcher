@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block style %}
+<style>
+    body, html {
+        height: 100%;
+        width: 100%;
+    }
+    .container {
+        height: 100%;
+    }
+
+    .server-message {
+        position: relative;
+        max-height: 100px;
+    }
+
+</style>
+{% end %}
+{% block body %}
+    <div class="container">
+        <h5>Welcome</h5>
+        <div class="server-message" id="message"></div>
+        <div class="inner-container" id="log-message"></div>
+    </div>
+{% end %}
+{% block js %}
+        <script type="text/javascript" src="{{ static_url('main.js') }}"></script>
+{% end %}
